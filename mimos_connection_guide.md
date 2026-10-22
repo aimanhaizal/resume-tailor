@@ -1,4 +1,4 @@
-# Resume Tailor V1 — How to Start and Use It
+# Resume Tailor V1 — How to Start and Use It, MIMOS
 
 ## 1. Start the services on the Linux workstation
 
