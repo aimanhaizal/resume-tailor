@@ -13,6 +13,11 @@ A portable, local-first n8n project for tailoring an existing resume to a specif
 - Avoid dependencies on Google Drive, Notion, or other cloud document storage.
 - Keep secrets, uploaded resumes, and generated documents out of Git.
 
+## Screenshots
+
+![Output of n8n](screenshots/n8n-flow.png)
+
+
 ## Requirements
 
 - Docker Desktop (Windows/macOS) or Docker Engine + the Compose plugin (Linux)
