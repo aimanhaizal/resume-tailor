@@ -1,0 +1,27 @@
+
+services:
+  n8n:
+    image: docker.n8n.io/n8nio/n8n:latest
+    restart: unless-stopped
+    ports:
+      - "5678:5678"
+    environment:
+      TZ: ${TZ:-Asia/Kuala_Lumpur}
+      GENERIC_TIMEZONE: ${GENERIC_TIMEZONE:-Asia/Kuala_Lumpur}
+      N8N_ENCRYPTION_KEY: ${N8N_ENCRYPTION_KEY:?Set N8N_ENCRYPTION_KEY in your .env file}
+      N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS: "true"
+      N8N_RUNNERS_ENABLED: "true"
+    volumes:
+      - n8n_data:/home/node/.n8n
+
+  docx-generator:
+    build:
+      context: ./docx-generator
+    restart: unless-stopped
+    environment:
+      DOCX_PUBLIC_BASE_URL: ${DOCX_PUBLIC_BASE_URL:-http://localhost:8000}
+    ports:
+      - "127.0.0.1:8000:8000"
+
+volumes:
+  n8n_data:

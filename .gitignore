@@ -1,0 +1,27 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+
+# Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Generated documents and personal test data
+docs/*.pdf
+*.docx
+*.doc
+*.pdf
+
+# Temporary backups and editor files
+*.bak
+*~
+*.swp
+.DS_Store
+Thumbs.db
+
+# Git and local runtime artifacts
+.git/
+node_modules/
