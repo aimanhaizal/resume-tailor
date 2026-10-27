@@ -2,8 +2,6 @@
 
 A portable, local-first n8n project for tailoring an existing resume to a specific job description.
 
-> **Project status: scaffold / not yet functional end-to-end.** This repository currently contains the cross-platform Docker setup and project documentation. The adapted n8n workflow will be added after its input, document parsing, AI output, and file export steps have been tested.
-
 ## Goals
 
 - Run locally on Windows, macOS, or Linux using Docker Compose.
